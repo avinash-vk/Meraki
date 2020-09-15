@@ -1,0 +1,110 @@
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #F5564E;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: white;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+/* Text for sign in */
+.signin {
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 70px;
+	line-height: 105px;
+
+	color: #FBF9FA;
+}
+
+/* Circle on the side */
+.dot {
+  height: 138.5px;
+  width: 138.5px;
+  background-color: #F5564E;
+  border-radius: 50%;
+  display: inline-block;
+}
+.onTheLine{
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translate(-50%,-50%);
+}
+
+/*Meraki text */
+.meraki {
+	position: absolute;
+	width: 150px;
+	height: 63px;
+	left: 86px;
+	top: 0px;
+
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 42px;
+	line-height: 63px;
+
+	/* identical to box height */
+
+	color: #FFFFFF;
+}
+
+/* The arrow */
+.arrow {
+position: absolute;
+left: 50%;
+top: 35%;
+width: 30px;
+height:49.5px;
+
+background-color: #F5564E;
+}
+
+/* line */
+.line {
+	position: absolute;
+	width: 102px;
+	height: 0px;
+	left: 30%;
+	top: 57%;
+
+	border: 12px solid #FFFFFF;
+}
+
+/* Logo ellipse */
+.ellipse {
+	position: absolute;
+	width: 54px;
+	height: 54px;
+	left: 15px;
+	top: 23px;
+	border-radius: 50%;
+
+	background: #C4C4C4;
+}
