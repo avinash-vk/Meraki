@@ -1,40 +1,38 @@
-import React        from 'react';
-import InputField   from './InputField';
+import React from 'react';
+import InputField from './InputField';
 import SubmitButton from './SubmitButton';
-import UserStore    from './stores/UserStores';
-import Arrow        from './arrow.png';
+import './App.css';
+import Arrow from './arrow.png';
+class LoginForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: '',
+      buttonDisabled: false,
+    };
+  }
 
-class LoginForm extends React.Component{
+  setInputValue(property, val) {
+    val = val.trim();
+    if (val.length > 12) {
+      return;
+    }
+    this.setState({
+      [property]: val,
+    });
+  }
 
-	constructor(props) {
-		super(props);
-		this.state= {
-			username:'',
-			password:'',
-			buttonDisabled: false
-		}
-	}
+  resetForm() {
+    this.setState({
+      username: '',
+      password: '',
+      buttonDisabled: false,
+    });
+  }
 
-	setInputValue(property,val) {
-		val=val.trim();
-		if(val.length>12) {
-			return;
-		}
-		this.setState({
-			[property]: val
-		})
-	}
-
-	resetForm() {
-		this.setState({
-			username:'',
-			password:'',
-			buttonDisabled: false
-		})
-	}
-
-	async doLogin() {
-		if(!this.state.username){
+  async doLogin() {
+    /*if(!this.state.username){
 			return;
 		}
 		if(!this.state.password){
@@ -74,55 +72,55 @@ class LoginForm extends React.Component{
 		catch(e) {
 			console.log(e);
 			this.resetForm();
-		}
-	}
+		}*/
+  }
 
-	render() {
-  	return (
-    	<div className="loginForm">
-			<div class="split left">
-	<div>
-		<div class="ellipse"></div>
-		<div>
-			<h1 class="meraki">Meraki</h1>
-		</div>
-	</div>
-  <div class="centered">
-    <h1 class="signin">Sign In</h1>
-  </div>
-	<div>
-		<div class="line"></div>
-	</div>
-</div>
-<div class="split right">
-	<div class="onTheLine dot">
-	<img class="arrow" src="arrow.png" background-colour="#F5564E"></img>
-	</div> 
-	<div class="centered">
-		<InputField
-					type='text'
-					placeholder='Username'
-					value={this.state.username ? this.state.username : ''}
-					onChange={(val) => this.setInputValue('username',val)}
-				/>
+  render() {
+    return (
+      <div className="loginForm">
+        <div class="split left">
+          <div>
+            <div class="ellipse"></div>
+            <div>
+              <h1 class="meraki">Meraki</h1>
+            </div>
+          </div>
+          <div class="centered">
+            <h1 class="signin">Sign In</h1>
+          </div>
+          <div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="split right">
+          <div class="onTheLine dot">
+            <img class="arrow" src={Arrow} background-colour="#F5564E"></img>
+          </div>
+          <div class="centered">
+            <InputField
+              type="text"
+              placeholder="Username"
+              value={this.state.username ? this.state.username : ''}
+              onChange={(val) => this.setInputValue('username', val)}
+            />
 
-				<InputField
-					type='password'
-					placeholder='Password'
-					value={this.state.password ? this.state.password : ''}
-					onChange={(val) => this.setInputValue('password',val)}
-				/>
-				
-				<SubmitButton
-					text='Sign In'
-					disable={this.state.buttonDisabled}
-					onClick={() => this.doLogin()}
-				/>
-	</div>
-</div>
-    	</div>
-  	);
-	}
+            <InputField
+              type="password"
+              placeholder="Password"
+              value={this.state.password ? this.state.password : ''}
+              onChange={(val) => this.setInputValue('password', val)}
+            />
+
+            <SubmitButton
+              text="Sign In"
+              disable={this.state.buttonDisabled}
+              onClick={() => this.doLogin()}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default LoginForm;

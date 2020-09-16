@@ -1,42 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .split {
   height: 100%;
   width: 50%;
@@ -71,13 +32,13 @@
 
 /* Text for sign in */
 .signin {
-	font-family: Poppins;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 70px;
-	line-height: 105px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 70px;
+  line-height: 105px;
 
-	color: #FBF9FA;
+  color: #FBF9FA;
 }
 
 /* Circle on the side */
@@ -88,69 +49,70 @@
   border-radius: 50%;
   display: inline-block;
 }
-.onTheLine{
-	position: absolute;
-	top: 50%;
-	left: 0%;
-	transform: translate(-50%,-50%);
+
+.onTheLine {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
 }
 
 /*Meraki text */
 .meraki {
-	position: absolute;
-	width: 150px;
-	height: 63px;
-	left: 86px;
-	top: 0px;
+  position: absolute;
+  width: 150px;
+  height: 63px;
+  left: 86px;
+  top: 0px;
 
-	font-family: Poppins;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 42px;
-	line-height: 63px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 63px;
 
-	/* identical to box height */
+  /* identical to box height */
 
-	color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 /* The arrow */
 .arrow {
-position: absolute;
-left: 50%;
-top: 35%;
-width: 30px;
-height:49.5px;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  width: 30px;
+  height: 49.5px;
 
-background-color: #F5564E;
+  background-color: #F5564E;
 }
 
 /* line */
 .line {
-	position: absolute;
-	width: 102px;
-	height: 0px;
-	left: 30%;
-	top: 57%;
+  position: absolute;
+  width: 102px;
+  height: 0px;
+  left: 30%;
+  top: 57%;
 
-	border: 12px solid #FFFFFF;
+  border: 12px solid #FFFFFF;
 }
 
 /* Logo ellipse */
 .ellipse {
-	position: absolute;
-	width: 54px;
-	height: 54px;
-	left: 15px;
-	top: 23px;
-	border-radius: 50%;
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  left: 15px;
+  top: 23px;
+  border-radius: 50%;
 
-	background: #C4C4C4;
+  background: #C4C4C4;
 }
 
 .inputField {
 
- padding-top: 16px;
+  padding-top: 16px;
 
 }
 
@@ -158,23 +120,23 @@ background-color: #F5564E;
 
 .input {
 
- box-sizing: border-box;
+  box-sizing: border-box;
 
- outline: none;
+  outline: none;
 
- border: solid 2px #1189de;
+  border: solid 2px #1189de;
 
- border-radius: 4px;
+  border-radius: 4px;
 
- color: #292929;
+  color: #292929;
 
- width: 100%;
+  width: 100%;
 
- padding: 12px;
+  padding: 12px;
 
- font-size: 14px;
+  font-size: 14px;
 
- background: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 1);
 
 }
 
@@ -182,7 +144,7 @@ background-color: #F5564E;
 
 .submitButton {
 
- padding-top: 16px;
+  padding-top: 16px;
 
 }
 
@@ -190,24 +152,24 @@ background-color: #F5564E;
 
 .btn {
 
- width: 100%;
+  width: 100%;
 
- min-width: 280px;
+  min-width: 280px;
 
- color: #565656;
+  color: #565656;
 
- padding: 12px;
+  padding: 12px;
 
- font-size: 14px;
+  font-size: 14px;
 
- font-weight: bold;
+  font-weight: bold;
 
- border: solid 2px #1189de;
+  border: solid 2px #1189de;
 
- border-radius: 4px;
+  border-radius: 4px;
 
- background: #fff;
+  background: #fff;
 
- cursor: pointer;
+  cursor: pointer;
 
 }
