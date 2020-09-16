@@ -2,14 +2,51 @@ import React from 'react';
 import Maps from './Maps';
 import StatusBar from './StatusBar';
 import SearchBar from './SearchBar';
+import StoryCard from '../story/storyCard';
+import {makeStyles} from '@material-ui/core/styles';
+import {Typography} from '@material-ui/core';
+
+const useStyles = makeStyles(() => ({
+  storyContainer: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '20px',
+  },
+  storyHeading: {
+    marginLeft: '20px',
+    display: 'inline-block',
+    //textDecoration: 'underline',
+    borderBottom: '4px solid red',
+    lineHeight: '0px',
+    borderBottomLeftRadius: '10px',
+  },
+  storyList: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+}));
 
 const Home = () => {
+  const classes = useStyles();
   return (
     <div>
       <Maps />
       <StatusBar />
       <SearchBar />
-      You're at home bruh.
+      <div className={classes.storyHeading}>
+        <h1>Stories</h1>
+      </div>
+      <div className={classes.storyContainer}>
+        <div className={classes.storyList}>
+          <StoryCard />
+          <StoryCard />
+        </div>
+      </div>
     </div>
   );
 };
