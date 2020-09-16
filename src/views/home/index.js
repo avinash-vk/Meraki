@@ -1,7 +1,12 @@
 import React from 'react';
-
+import Maps from './Maps';
 const Home = () => {
-  return <div>You're at home bruh.</div>;
+  return (
+    <div>
+      <Maps />
+      You're at home bruh.
+    </div>
+  );
 };
 
 export default Home;
