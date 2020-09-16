@@ -9,7 +9,7 @@ import Story from './views/story';
 import StoryCreateForm from './views/story/storyCreateForm';
 import Home from './views/home';
 import Landing from './views/landing';
-
+import Navbar from './components/Navbar';
 function App() {
   const [auth, setAuth] = useState(true); // make it false later.
 
@@ -33,6 +33,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Navbar />
       <div className="App">{routes}</div>
     </BrowserRouter>
   );
