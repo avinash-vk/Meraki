@@ -17,7 +17,7 @@ background-color: black;
     color:white;
     padding:2vh;
     font-weight: lighter;
-    font-size: smaller;
+    font-size: small;
     float:right;
     align-self: flex-end;
     text-decoration: none;
@@ -38,17 +38,17 @@ background-color: black;
 .first-col{
     float:left;
     width:48%;
-    
+  
+
 }
 .second-col{
-    float:right;
-    align-items: center;
+   float: right;
 }
 .tagline{
-    font-size: xx-large;
+    font-size: xxx-large;
     font-family:Verdana;
     font-weight: bold;  
-
+    margin-top: 20vh;
 }
 .purposecontainer{
     margin-top: 10vh;
@@ -62,7 +62,7 @@ background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 30px;
+    
   }
   
   .input-field {
@@ -97,14 +97,14 @@ background-color: black;
   
   .contact-container  {
     flex-flow: column;
-    padding-top: 30px;
     display: flex;
-    justify-content: center;
-    align-self: center;
     width:80%;
-    
+    margin-left: 10%;
   }
   .div-title{
     text-align: center;
+  }
+  .white-text{
+    color:white
   }
   

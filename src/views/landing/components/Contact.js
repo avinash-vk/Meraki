@@ -2,7 +2,7 @@ import React from 'react'
 import '../landing.css'
 const Contact = () => {
     return(
-        <div className='contact-container bg-grey'>
+        <div className='contact-container'>
             <span className="div-title">Contact us</span>
             <div className='contact-form'>                    
                 <div id='sect2'>
