@@ -1,7 +1,8 @@
 import React from 'react';
+import LoginForm from './LoginForm';
 
 const SignIn = () => {
-  return <div>This is signIn page.</div>;
+  return <LoginForm />;
 };
 
 export default SignIn;
