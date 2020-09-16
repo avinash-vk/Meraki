@@ -1,0 +1,110 @@
+.container {
+background-color: black;
+
+}
+.nav{
+    height:10vh
+}
+.headercontainer {
+    
+  background:linear-gradient(45deg,#F5564E,black);
+  border-bottom-left-radius:300px;
+  border-bottom-right-radius:700px;
+    height:90vh
+}
+
+.navlink{
+    color:white;
+    padding:2vh;
+    font-weight: lighter;
+    font-size: small;
+    float:right;
+    align-self: flex-end;
+    text-decoration: none;
+    padding-right:4vh;
+}
+.brand_name{
+   font-weight: bold;
+   font-size: larger;
+   float: left;
+   padding-left:6vh
+}
+.image{
+    height:60vh;
+    width:50vw;
+    opacity:0.7;
+    align-self:"flex-end";
+}
+.first-col{
+    float:left;
+    width:48%;
+  
+
+}
+.second-col{
+   float: right;
+}
+.tagline{
+    font-size: xxx-large;
+    font-family:Verdana;
+    font-weight: bold;  
+    margin-top: 20vh;
+}
+.purposecontainer{
+    margin-top: 10vh;
+    height:100vh;
+
+    
+}
+
+.contact-form > div {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  
+  .input-field {
+    height: 40px;
+    margin: 15px 0;
+  }
+
+  .contact-btn {
+    margin-top: 15px;
+    height: 40px;
+    color: white;
+    border: 0;
+    background-color: #F5564E;
+  }
+  #sect2{
+    width:100%;
+  }
+  @media only screen and (min-width:320px) and (max-width:725px){
+    .contact-form{
+      display: flex;
+      flex-direction: column;
+      /*flex-flow: row wrap;*/
+      width:80%;
+    }
+
+}
+.div-title {
+    font-size: 30px;
+    font-weight: 600;
+    color:whitesmoke;
+  }
+  
+  .contact-container  {
+    flex-flow: column;
+    display: flex;
+    width:80%;
+    margin-left: 10%;
+  }
+  .div-title{
+    text-align: center;
+  }
+  .white-text{
+    color:white
+  }
+  

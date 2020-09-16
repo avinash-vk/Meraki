@@ -1,0 +1,66 @@
+.tempnav{
+    height:10vh;
+    background-color: #F5564E;
+    
+}
+.navlink{
+    color:white;
+    padding:2vh;
+    font-weight: lighter;
+    
+    float:right;
+    align-self: flex-end;
+    text-decoration: none;
+    padding-right:4vh;
+}
+.brand_name{
+   font-weight: bold;
+   font-size: larger;
+   float: left;
+   padding-left:6vh
+}
+
+.cover{
+    margin-top: 5vh;
+    height:50vh;
+    width:50vw;
+    margin-left: 25vw;
+    opacity:0.8
+}
+.coverheader{
+    text-align: center;
+    width:80%;
+    margin-left:10%
+}
+.quotes{
+    color: #F5564E;  
+    font-size: 8vh;
+    line-height: 8vh;
+    font-family:Cochin;
+    font-weight:bold
+}
+.subtitle{
+    font-family: Verdana;
+font-style: italic;
+font-weight: lighter;
+font-size: 3vh;
+line-height: 3vh;
+text-align: center;
+color: #696969;
+
+}
+.maintitle{
+font-family: Verdana;
+font-style: normal;
+font-weight: bold;
+font-size: 3vh;
+line-height: 3vh;
+text-align: center;
+color: #666666;
+}
+.story{
+    font-size:2.5vh;
+    color: #696969;
+    font-weight: lighter;
+    font-family: Verdana;
+}

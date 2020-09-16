@@ -1,7 +1,42 @@
 import React from 'react';
-
+import TempNavbar from './components/TempNavbar';
+import Man2 from './assets/man2.jpg'
 const Story = () => {
-  return <div>This is where you're story view will come into place</div>;
+  return <div>
+    <TempNavbar/>
+    
+    <img src={Man2} className="cover">
+    </img>
+    <div className="coverheader">
+    <text class="maintitle">Dinesh,65,Male</text><br></br>
+    <text className="quotes">“</text>
+    <text className="subtitle">Muhammed Noushad drinks the ginger-lemon-honey tea prepared by monks at Sera Jey Monastic University in Bylakuppe and reflects on the importance of The Way of Tea in Buddhist paths.</text>
+    <text className="quotes">”</text>
+    <br>
+    </br>
+    <div style={{marginTop:"2vh"}}>
+    <text className="story">
+    Everyone seems to have a chai story – a favorite chai wallah, a unique recipe discovered in the alleys of a crowded market, or memories of a profound conversation with a new friend made over a hot cup.
+    The Yiga Choeling Cultural Center of Sera Jey Buddhist monastery has a small tea shop in front of it, a round-shaped hut that opens only in the evening. In the beautifully landscaped meadow, you see monks sitting and sipping tea. Away from the tourist hustle bustle of the Bylakkuppe golden temple and the adjacent Tibetan market, this area is not known to many people. Most of the visitors see the golden temple and return. Just three kilometers interior, you find Sera Jey and Sera Mey monastic universities, exquisitely painted temples, libraries and typical Tibetan streets. An extraordinarily peaceful place. Suddenly you feel a touch of magical realism, as if you are in another country, remote and exotic, exploring through its exiled traditions.
+    The Yiga Choeling Cultural Center of Sera Jey Buddhist monastery has a small tea shop in front of it, a round-shaped hut that opens only in the evening. In the beautifully landscaped meadow, you see monks sitting and 
+    Everyone seems to have a chai story – a favorite chai wallah, a unique recipe discovered in the alleys of a crowded market, or memories of a profound conversation with a new friend made over a hot cup.
+
+The Yiga Choeling Cultural Center of Sera Jey Buddhist monastery has a small tea shop in front of it, a round-shaped hut that opens only in the evening. In the beautifully landscaped meadow, you see monks sitting and sipping tea. Away from the tourist hustle bustle of the Bylakkuppe golden temple and the adjacent Tibetan market, this area is not known to many people. Most of the visitors see the golden temple and return. Just three kilometers interior, you find Sera Jey and Sera Mey monastic universities, exquisitely painted temples, libraries and typical Tibetan streets. An extraordinarily peaceful place. Suddenly you feel a touch of magical realism, as if you are in another country, remote and exotic, exploring through its exiled traditions.
+
+The Yiga Choeling Cultural Center of Sera Jey Buddhist monastery has a small tea shop in front of it, a round-shaped hut that opens only in the evening. In the beautifully landscaped meadow, you see monks sitting and 
+Everyone seems to have a chai story – a favorite chai wallah, a unique recipe discovered in the alleys of a crowded market, or memories of a profound conversation with a new friend made over a hot cup.
+
+The Yiga Choeling Cultural Center of Sera Jey Buddhist monastery has a small tea shop in front of it, a round-shaped hut that opens only in the evening. In the beautifully landscaped meadow, you see monks sitting and sipping tea. Away from the tourist hustle bustle of the Bylakkuppe golden temple and the adjacent Tibetan market, this area is not known to many people. Most of the visitors see the golden temple and return. Just three kilometers interior, you find Sera Jey and Sera Mey monastic universities, exquisitely painted temples, libraries and typical Tibetan streets. An extraordinarily peaceful place. Suddenly you feel a touch of magical realism, as if you are in another country, remote and exotic, exploring through its exiled traditions.
+
+The Yiga Choeling Cultural Center of Sera Jey Buddhist monastery has a small tea shop in front of it, a
+    </text>
+    </div>
+    </div>
+    
+   
+    
+
+  </div>;
 };
 
 export default Story;
