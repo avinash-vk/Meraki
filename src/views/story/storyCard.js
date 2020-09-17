@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Redirect} from 'react-router-dom';
 import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = (props) =>
@@ -17,7 +18,7 @@ const useStyles = (props) =>
     Image: {
       width: '30%',
       height: '100%',
-      background: `url(${props.thumbnail}) no-repeat center center `,
+      background: `url(${props.imageUrl}) no-repeat center center `,
       backgroundSize: 'cover',
     },
     Content: {
@@ -47,26 +48,36 @@ const useStyles = (props) =>
     },
   }));
 
-const data = {
-  thumbnail:
-    'https://images.unsplash.com/photo-1559294824-627e9738df81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
-  title: 'The tale of one man and three kids',
-  subtitle:
-    'Rajesh was 4 years old when his two siblings and his father was moving in as an immigrant into London with 2 euros and no job ...',
-  tags: ['job needed', 'carpenter'],
-};
+const StoryCard = (props) => {
+  const [isClicked, setClick] = useState(false);
 
-const StoryCard = () => {
-  const classes = useStyles(data)();
+  const {story} = props;
+  console.log('STORY', story);
+  const classes = useStyles(story)();
+  if (isClicked) {
+    return (
+      <Redirect
+        to={{
+          pathname: `/story/${story.uid}`,
+          state: {story: story},
+        }}
+      />
+    );
+  }
   return (
-    <div className={classes.cardContainer}>
+    <div
+      className={classes.cardContainer}
+      onClick={() => {
+        setClick(true);
+      }}
+    >
       <div className={classes.Image}></div>
       <div className={classes.Content}>
-        <div className={classes.Title}>{data.title}</div>
-        <div className={classes.Subtitle}>{data.subtitle}</div>
+        <div className={classes.Title}>{story.title}</div>
+        <div className={classes.Subtitle}>{story.content}</div>
         <div className={classes.TagContainer}>
-          {data.tags.map((value) => (
-            <div className={classes.Tag}>{value}</div>
+          {Object.keys(story.tags).map((value) => (
+            <div className={classes.Tag}>{story.tags[value]}</div>
           ))}
         </div>
       </div>

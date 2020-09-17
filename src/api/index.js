@@ -49,7 +49,7 @@ const GetStory = async () => {
     })
     .catch((err) => console.log('error occured'));
 
-  console.log(output);
+  return output;
 };
 
 export default {

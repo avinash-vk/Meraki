@@ -1,10 +1,40 @@
 import React from 'react';
 import BottomNav from './components/TempNavbar';
-import Man2 from './assets/man2.jpg'
-import { makeStyles } from '@material-ui/core/styles';
-import SpeedDials from './components/floatingbutton'
-import './storyview.css'
-const Story = () => {
+import Man2 from './assets/man2.jpg';
+import {makeStyles} from '@material-ui/core/styles';
+import SpeedDials from './components/floatingbutton';
+import './storyview.css';
+const Story = (props) => {
+  console.log(props);
+  const {story} = props.location.state;
+  const {name, age, gender} = story.target;
+  return (
+    <div>
+      <div style={{display: 'flex'}}>
+        <img src={story.imageUrl} className="cover first-col"></img>
+        <SpeedDials className="SpeedDial" />
+        <br></br>
+      </div>
+
+      <div className="coverheader">
+        <br></br>
+        <br></br>
+        <h1 class="maintitle">{`${name + ',' + age + ',' + gender}`}</h1>
+        <br></br>
+        <text className="quotes">“</text>
+        <text className="subtitle">{story.title}</text>
+        <text className="quotes">”</text>
+        <br></br>
+        <div style={{marginTop: '2vh'}}>
+          <text className="story">{story.content}</text>
+        </div>
+      </div>
+      <BottomNav></BottomNav>
+    </div>
+  );
+};
+
+/* 
   return <div>
     <div>
     <img src={Man2} className="cover first-col">
@@ -42,6 +72,6 @@ The Yiga Choeling Cultural Center of Sera Jey Buddhist monastery has a small tea
     </div>
    <BottomNav></BottomNav>  
   </div>;
-};
+};*/
 
 export default Story;

@@ -80,12 +80,7 @@ class LoginForm extends React.Component {
     return (
       <div className="loginForm">
         <div class="split left">
-          <div>
-            <div class="ellipse"></div>
-            <div>
-              <h1 class="meraki">Meraki</h1>
-            </div>
-          </div>
+        
           <div class="centered">
             <h1 class="signin">Sign In</h1>
           </div>

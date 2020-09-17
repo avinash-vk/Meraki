@@ -42,8 +42,9 @@ class Home extends React.Component {
     let output = await API.GetStory();
     this.setState({
       loading: false,
+      stories: output.data.data,
     });
-    console.log(output);
+    console.log(this.state.stories);
   };
 
   location = [
@@ -58,7 +59,7 @@ class Home extends React.Component {
     } else {
       return (
         <div>
-          <GMap location={this.location} zoomLevel={17} />
+          <GMap location={this.location} zoomLevel={7} />
           <StatusBar />
           <SearchBar />
           <div className={classes.storyHeading}>
@@ -66,8 +67,9 @@ class Home extends React.Component {
           </div>
           <div className={classes.storyContainer}>
             <div className={classes.storyList}>
-              <StoryCard />
-              <StoryCard />
+              {this.state.stories.map((story) => {
+                return <StoryCard story={story} />;
+              })}
             </div>
           </div>
         </div>

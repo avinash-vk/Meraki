@@ -22,7 +22,11 @@ function App() {
         <Route exact path="/home" component={Home} />
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/story/:id" component={Story} />
+        <Route
+          exact
+          path="/story/:id"
+          render={(props) => <Story {...props} />}
+        />
         <Route exact path="/story/new/:id" component={StoryCreateForm} />
         <Route exact path="/profile" component={Profile} />
       </Switch>

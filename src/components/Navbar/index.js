@@ -50,6 +50,16 @@ function AppBarCollapse() {
       <ButtonAppBarCollapse dataTarget="#appbar-collapse" />
       <div className={classes.wrapper} id="appbar-collapse">
         <ul className={classes.listContainer} id="list-appbar-collapse">
+        <li className={classes.listMenus}>
+            <Link to="/home" className={classes.listItems}>
+              Home
+            </Link>
+          </li>
+          <li className={classes.listMenus}>
+            <Link to="/story/new/:id" className={classes.listItems}>
+              Create Stories
+            </Link>
+          </li>
           <li className={classes.listMenus}>
             <Link to="/signin" className={classes.listItems}>
               Sign In
@@ -82,13 +92,7 @@ const Navbar = (props) => {
         >
           <img src={Newlogo} className="img-xxs" height={50} />
         </IconButton>
-        <Typography
-          variant="title"
-          color="inherit"
-          className={classes.appTitle}
-        >
-          Meraki
-        </Typography>
+       
         <AppBarCollapse />
       </Toolbar>
     </AppBar>
