@@ -50,7 +50,7 @@ color: #696969;
 
 }
 .maintitle{
-font-family: Verdana;
+font-family: Poppins;
 font-style: normal;
 font-weight: bold;
 font-size: 3vh;
@@ -60,7 +60,31 @@ color: #666666;
 }
 .story{
     font-size:2.5vh;
-    color: #696969;
+    color:grey;
     font-weight: lighter;
-    font-family: Verdana;
+    font-family: Poppins;
 }
+.SpeedDial{
+    margin: '10px';  
+    position: 'relative';
+    background: 'transparent';
+
+}
+.first-col{
+    float:left;
+    width:48%;
+}
+/*
+.second-col-speed{
+
+   float: right;
+   width:10%
+}
+*/
+.stickToBottom{
+    width:100%;
+    position:fixed;
+    bottom: 0;
+    opacity:0.7
+
+  }

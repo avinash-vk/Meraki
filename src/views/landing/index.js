@@ -21,7 +21,6 @@ const ColorButton = withStyles((theme) => ({
 const Landing = () => {
   return  <div className="container">
     <div className="headercontainer">
-        <Navbar/>
         <div>
         <section className="first-col">
           <text className="tagline" style={{float:"right",textAlign:"right"}}>We <text className="white-text">Make</text>

@@ -1,13 +1,7 @@
+import { BottomNavigation } from '@material-ui/core';
+import SpeedDials from './floatingbutton'
 import React from 'react';
-import '../storyview.css';
-const TempNavbar = () => {
-  return  <nav className="tempnav">
-      <a className="brand_name navlink" href="#">Meraki</a>
-      
-      <a className="navlink" style={{paddingRight:"6vh"}} href="#">LINK 1</a>
-      <a className="navlink" href="#contact">LINK 2</a>
-      <a className="navlink" href="#">LINK 3</a>
-      
-  </nav>
+const BottomNav = () => {
+return <BottomNavigation className="stickToBottom"><SpeedDials/> </BottomNavigation>
 };
-export default TempNavbar;
+export default BottomNav;
