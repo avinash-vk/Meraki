@@ -80,17 +80,8 @@ class LoginForm extends React.Component {
     return (
       <div className="loginForm">
         <div class="split left">
-          <div>
-            <div class="ellipse"></div>
-            <div>
-              <h1 class="meraki">Meraki</h1>
-            </div>
-          </div>
           <div class="centered">
             <h1 class="signin">Sign In</h1>
-          </div>
-          <div>
-            <div class="line"></div>
           </div>
         </div>
         <div class="split right">
@@ -99,8 +90,8 @@ class LoginForm extends React.Component {
           </div>
           <div class="centered">
             <InputField
-              type="text"
-              placeholder="Username"
+              type="email"
+              placeholder="Email"
               value={this.state.username ? this.state.username : ''}
               onChange={(val) => this.setInputValue('username', val)}
             />

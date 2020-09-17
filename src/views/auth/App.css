@@ -89,11 +89,11 @@
 
 /* line */
 .line {
-  position: absolute;
+  position: relative;
   width: 102px;
   height: 0px;
   left: 30%;
-  top: 57%;
+  top: 77%;
 
   border: 12px solid #FFFFFF;
 }

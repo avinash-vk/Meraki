@@ -97,17 +97,10 @@ class SignUpForm extends React.Component {
     return (
       <div className="loginForm">
         <div class="split left">
-          <div>
-            <div class="ellipse"></div>
-            <div>
-              <h1 class="meraki">Meraki</h1>
-            </div>
-          </div>
           <div class="centered">
             <h1 class="signin">Sign Up</h1>
           </div>
           <div>
-            <div class="line"></div>
           </div>
         </div>
         <div class="split right">
@@ -141,13 +134,6 @@ class SignUpForm extends React.Component {
               placeholder="Location"
               value={this.state.location ? this.state.location : ''}
               onChange={(val) => this.setInputValueForUserDetails('location', val)}
-            />
-
-            <InputField
-              type="text"
-              placeholder="Username"
-              value={this.state.username ? this.state.username : ''}
-              onChange={(val) => this.setInputValue('username', val)}
             />
 
             <InputField
