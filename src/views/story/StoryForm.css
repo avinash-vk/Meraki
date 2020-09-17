@@ -43,7 +43,7 @@
 
 .inputField {
 
- padding-top: 16px;
+ padding-top: 12px;
 
 }
 
@@ -61,7 +61,29 @@
 
  color: #292929;
 
- width: "100vw";
+ width: "200vw";
+
+ padding: 12px;
+
+ font-size: 14px;
+
+ background: rgba(255, 255, 255, 1);
+
+}
+
+.storyinput {
+
+ box-sizing: border-box;
+
+ outline: none;
+
+ border: solid 2px #1189de;
+
+ border-radius: 4px;
+
+ color: #292929;
+
+ width: 100%;
 
  padding: 12px;
 
@@ -77,8 +99,6 @@
 
  min-width: 280px;
 
- color: #565656;
-
  padding: 12px;
 
  font-size: 14px;
@@ -92,6 +112,8 @@
  background: #fff;
 
  cursor: pointer;
+ background-color: #F5564E;
+ color: white;
 
 }
 
@@ -99,7 +121,7 @@
 font-family: Poppins;
 font-style: normal;
 font-weight: bold;
-font-size: 36px;
+font-size: 28px;
 line-height: 54px;
 
 /* identical to box height */
