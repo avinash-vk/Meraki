@@ -80,9 +80,9 @@
 .arrow {
   position: absolute;
   left: 50%;
-  top: 35%;
+  top: 30%;
   width: 30px;
-  height: 49.5px;
+  height: 60px;
 
   background-color: #F5564E;
 }
