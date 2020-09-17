@@ -3,7 +3,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 // import components
 import SignIn from './views/auth/SignIn';
-import SignUp from './views/auth/SignUp';
+import SignUp from './views/auth/signup/SignUp.js';
 import Profile from './views/profile';
 import Story from './views/story';
 import StoryCreateForm from './views/story/storyCreateForm';
