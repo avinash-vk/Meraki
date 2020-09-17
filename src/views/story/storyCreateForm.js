@@ -43,21 +43,7 @@ class StoryCreateForm extends React.Component {
 
   render(){
 	return( <div>
-    <div class="rectangle">
-
-			<div>
-
-				<div class="ellipse">
-				</div>
-				<div>
-					<h1 class="meraki">Meraki</h1>
-				</div>
-
-			</div>
-
-		</div>
-
-    <div style={{paddingTop: "5%",paddingLeft: "2%",paddingRight:"2%"}}>
+    <div style={{paddingLeft: "2%",paddingRight:"2%"}}>
 			<div>
 			</div>
 			<br></br>
@@ -130,7 +116,7 @@ class StoryCreateForm extends React.Component {
 					value={this.state.story ? this.state.story : ''}
 					onChange={(val) => this.setInputValue('story',val)}
 				/>
-	<div class="centered" style={{paddingTop: "20px"}}>
+	<div  style={{paddingTop: "20px",alignSelf:"center"}}>
     	<SubmitButton
 					text='Create Story'
 					disable={this.state.buttonDisabled}

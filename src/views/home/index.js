@@ -48,7 +48,7 @@ const Home = () => {
   return (
     <div>
       <Maps />
-      <GMap location={location} zoomLevel={17}/>
+      <GMap location={location} zoomLevel={7}/>
       <StatusBar />
       <SearchBar />
       <div className={classes.storyHeading}>
