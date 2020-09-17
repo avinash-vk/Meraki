@@ -40,7 +40,20 @@ const CreateStory = async (data) => {
   return output;
 };
 
+const GetStory = async () => {
+  let output = '';
+
+  await axios(`${BASE_URL}/story`)
+    .then((resp) => {
+      output = resp;
+    })
+    .catch((err) => console.log('error occured'));
+
+  console.log(output);
+};
+
 export default {
   Test,
   CreateStory,
+  GetStory,
 };

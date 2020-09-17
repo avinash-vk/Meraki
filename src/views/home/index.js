@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Maps from './Maps';
 import StatusBar from './StatusBar';
 import SearchBar from './SearchBar';
 import StoryCard from '../story/storyCard';
-import {makeStyles} from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core/styles';
 import {Typography} from '@material-ui/core';
-import GMap from './Maps/googlemaps'
-const useStyles = makeStyles(() => ({
+import GMap from './Maps/googlemaps';
+import API from '../../api';
+
+const useStyles = () => ({
   storyContainer: {
     width: '100%',
     display: 'flex',
@@ -29,39 +31,49 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     justifyContent: 'center',
   },
-}));
+});
 
-const Home = () => {
-  const classes = useStyles();
-  const location = [
-    {address: 'Plumber',
-    lat: 37.42216,
-    lng: -120.08427},
-    {address: 'Carpenter',
-    lat: 37.42216,
-    lng: -122.08427},
-    {address: 'Maid',
-    lat: 38.42216,
-    lng: -122.08427}
+class Home extends React.Component {
+  state = {
+    loading: true,
+    stories: [],
+  };
+  componentDidMount = async () => {
+    let output = await API.GetStory();
+    this.setState({
+      loading: false,
+    });
+    console.log(output);
+  };
 
+  location = [
+    {address: 'Plumber', lat: 37.42216, lng: -120.08427},
+    {address: 'Carpenter', lat: 37.42216, lng: -122.08427},
+    {address: 'Maid', lat: 38.42216, lng: -122.08427},
   ];
-  return (
-    <div>
-      <Maps />
-      <GMap location={location} zoomLevel={17}/>
-      <StatusBar />
-      <SearchBar />
-      <div className={classes.storyHeading}>
-        <h1>Stories</h1>
-      </div>
-      <div className={classes.storyContainer}>
-        <div className={classes.storyList}>
-          <StoryCard />
-          <StoryCard />
+  render() {
+    const {classes} = this.props;
+    if (this.state.loading) {
+      return <div>Loading...</div>;
+    } else {
+      return (
+        <div>
+          <GMap location={this.location} zoomLevel={17} />
+          <StatusBar />
+          <SearchBar />
+          <div className={classes.storyHeading}>
+            <h1>Stories</h1>
+          </div>
+          <div className={classes.storyContainer}>
+            <div className={classes.storyList}>
+              <StoryCard />
+              <StoryCard />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  );
-};
+      );
+    }
+  }
+}
 
-export default Home;
+export default withStyles(useStyles)(Home);

@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Contact from './components/Contact';
 import Man from './assets/worker.jpg';
 import {Button} from '@material-ui/core';
-import API from '../../api';
 import {withStyles} from '@material-ui/core/styles';
 const ColorButton = withStyles((theme) => ({
   root: {
@@ -24,36 +23,6 @@ const Landing = () => {
     <div className="container">
       <div className="headercontainer">
         <Navbar />
-
-        <button
-          onClick={async () => {
-            try {
-              const data = {
-                uid: '1234',
-                imageUrl:
-                  'https://images.unsplash.com/photo-1599687349533-82f24a0b62cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
-                title: 'Its a great day',
-                target: {
-                  name: 'joe',
-                  age: 20,
-                  gender: 'male',
-                  contact: '874832438247',
-                  location: {
-                    lat: '12.9772793',
-                    long: '77.671645',
-                  },
-                },
-                content: 'it was indeed a great day',
-                tags: ['plumber', 'job needed'],
-              };
-              console.log('Checking', await API.CreateStory(data));
-            } catch (err) {
-              console.log(err);
-            }
-          }}
-        >
-          Click me
-        </button>
         <div>
           <section className="first-col">
             <text
