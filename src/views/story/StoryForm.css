@@ -123,7 +123,7 @@ font-style: normal;
 font-weight: bold;
 font-size: 28px;
 line-height: 54px;
-
+width:50vw;
 /* identical to box height */
 
 color: #F5564E;
@@ -134,4 +134,7 @@ color: #F5564E;
   left: 50%;
   transform: translate(-50%, 0%);
   text-align: center;
+}
+.storyfull{
+	width:"100%"
 }
