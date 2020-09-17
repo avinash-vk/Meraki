@@ -3,11 +3,14 @@ import InputField from './InputField';
 import SubmitButton from './SubmitButton';
 import './App.css';
 import Arrow from './arrow.png';
-import Arrow1 from './arrow1.png';
-class LoginForm extends React.Component {
+class SignUpForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+			fullname: '',
+			contact: '',
+			email: '',
+			location: '',
       username: '',
       password: '',
       buttonDisabled: false,
@@ -24,8 +27,22 @@ class LoginForm extends React.Component {
     });
   }
 
+	setInputValueForUserDetails(property, val) {
+    val = val.trim();
+    if (val.length > 30) {
+      return;
+    }
+    this.setState({
+      [property]: val,
+    });
+  }
+
   resetForm() {
     this.setState({
+			fullname: '',
+			contact: '',
+			email: '',
+			location: '',
       username: '',
       password: '',
       buttonDisabled: false,
@@ -87,7 +104,7 @@ class LoginForm extends React.Component {
             </div>
           </div>
           <div class="centered">
-            <h1 class="signin">Sign In</h1>
+            <h1 class="signin">Sign Up</h1>
           </div>
           <div>
             <div class="line"></div>
@@ -95,9 +112,37 @@ class LoginForm extends React.Component {
         </div>
         <div class="split right">
           <div class="onTheLine dot">
-            <img class="arrow" src={Arrow1} background-colour="#F5564E" ></img>
+            <img class="arrow" src={Arrow} background-colour="#F5564E"></img>
           </div>
           <div class="centered">
+						<InputField
+              type="text"
+              placeholder="Full Name"
+              value={this.state.fullname ? this.state.fullname : ''}
+              onChange={(val) => this.setInputValueForUserDetails('fullname', val)}
+            />
+
+						<InputField
+              type="tel"
+              placeholder="Contact"
+              value={this.state.contact ? this.state.contact : ''}
+              onChange={(val) => this.setInputValue('contact', val)}
+            />
+
+						<InputField
+              type="email"
+              placeholder="Email"
+              value={this.state.email ? this.state.email : ''}
+              onChange={(val) => this.setInputValueForUserDetails('email', val)}
+            />
+
+						<InputField
+              type="text"
+              placeholder="Location"
+              value={this.state.location ? this.state.location : ''}
+              onChange={(val) => this.setInputValueForUserDetails('location', val)}
+            />
+
             <InputField
               type="text"
               placeholder="Username"
@@ -113,7 +158,7 @@ class LoginForm extends React.Component {
             />
 
             <SubmitButton
-              text="Sign In"
+              text="Sign Up"
               disable={this.state.buttonDisabled}
               onClick={() => this.doLogin()}
             />
@@ -124,4 +169,4 @@ class LoginForm extends React.Component {
   }
 }
 
-export default LoginForm;
+export default SignUpForm;
