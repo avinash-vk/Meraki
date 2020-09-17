@@ -3,6 +3,7 @@ import InputField from './InputField';
 import SubmitButton from './SubmitButton';
 import './App.css';
 import Arrow from './arrow.png';
+import Arrow1 from './arrow1.png';
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
@@ -94,7 +95,7 @@ class LoginForm extends React.Component {
         </div>
         <div class="split right">
           <div class="onTheLine dot">
-            <img class="arrow" src={Arrow} background-colour="#F5564E"></img>
+            <img class="arrow" src={Arrow1} background-colour="#F5564E" ></img>
           </div>
           <div class="centered">
             <InputField

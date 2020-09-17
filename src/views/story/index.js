@@ -1,13 +1,21 @@
 import React from 'react';
-import TempNavbar from './components/TempNavbar';
+import BottomNav from './components/TempNavbar';
 import Man2 from './assets/man2.jpg'
+import { makeStyles } from '@material-ui/core/styles';
+import SpeedDials from './components/floatingbutton'
+import './storyview.css'
 const Story = () => {
   return <div>
-    <TempNavbar/>
-    
-    <img src={Man2} className="cover">
+    <div>
+    <img src={Man2} className="cover first-col">
     </img>
+    <SpeedDials className="SpeedDial" />
+    <br></br>
+    </div>
+    
     <div className="coverheader">
+     <br></br>
+     <br></br>
     <text class="maintitle">Dinesh,65,Male</text><br></br>
     <text className="quotes">“</text>
     <text className="subtitle">Muhammed Noushad drinks the ginger-lemon-honey tea prepared by monks at Sera Jey Monastic University in Bylakuppe and reflects on the importance of The Way of Tea in Buddhist paths.</text>
@@ -32,10 +40,7 @@ The Yiga Choeling Cultural Center of Sera Jey Buddhist monastery has a small tea
     </text>
     </div>
     </div>
-    
-   
-    
-
+   <BottomNav></BottomNav>  
   </div>;
 };
 
