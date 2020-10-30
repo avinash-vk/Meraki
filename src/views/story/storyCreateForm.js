@@ -47,15 +47,17 @@ class StoryCreateForm extends React.Component {
 			<div>
 			</div>
 			<br></br>
+			<div>
+			<text class="headingText">Target Information</text>
 			<div style={{flexDirection:"column"}}>
 			<text class="formText" style={{float:"left"}}>Target name </text>
 			<InputField
-					style={{float:"right"}}
 					type='text'
 					placeholder='Name'
 					value={this.state.tname ? this.state.tname : ''}
 					onChange={(val) => this.setInputValue('tname',val)}
 				/>
+			<br></br>
         	<text class="formText" style={{float:"left"}}>Target Age </text>
 			<InputField
 					style={{float:"right"}}
@@ -64,16 +66,18 @@ class StoryCreateForm extends React.Component {
 					value={this.state.tage ? this.state.tage : ''}
 					onChange={(val) => this.setInputValue('tage',val)}
 				/>
+			<br></br>
         </div>
 
 			<text class="formText" style={{float:"left"}}>Target Gender </text>
-			<InputField
-					style={{float:"right"}}
-					type='text'
-					placeholder='Gender'
-					value={this.state.tgender ? this.state.tgender : ''}
-					onChange={(val) => this.setInputValue('tgender',val)}
-				/>
+			<select class="input" name="genders" style={{color:"gray"}}>
+				<option value="placeholder">Select Gender</option>
+  				<option value="male">Male</option>
+  				<option value="female">Female</option>
+  				<option value="other">Other</option>
+  				<option value="na">Choose not to mention</option>
+			</select>
+			<br></br><br></br>
         	<text class="formText" style={{float:"left"}}>Target Contact </text>
 			<InputField
 					style={{float:"right"}}
@@ -83,6 +87,10 @@ class StoryCreateForm extends React.Component {
 					onChange={(val) => this.setInputValue('contact',val)}
 				/>
 			<br></br>
+	</div>
+	<div>
+		<text class="headingText">Story Information</text>
+			<div style={{flexDirection:"column"}}>
 			<text class="formText" style={{float:"left"}}>What kind of job is the target capable of?</text>
 			<InputField
 					type='text'
@@ -92,6 +100,7 @@ class StoryCreateForm extends React.Component {
           className="inputfull"
           style={{float:"right"}}
 				/>
+			<br></br>
         	<text class="formText" style={{float:"left"}}>Add Story Cover </text>
 		
 			<InputField
@@ -100,6 +109,7 @@ class StoryCreateForm extends React.Component {
 					value={this.state.image ? this.state.image : ''}
 					onChange={(val) => this.setInputValue('image',val)}
 				/>
+			<br></br></div></div>
         <text class="formText">Quote them</text>
         <textarea
 					class="storyinput"
@@ -108,6 +118,7 @@ class StoryCreateForm extends React.Component {
 					value={this.state.title ? this.state.title : ''}
 					onChange={(val) => this.setInputValue('title',val)}
 				/>
+			<br></br><br></br>
 			<text class="formText">What is their story?</text>
 			<textarea
 					class="storyinput"
@@ -116,7 +127,8 @@ class StoryCreateForm extends React.Component {
 					value={this.state.story ? this.state.story : ''}
 					onChange={(val) => this.setInputValue('story',val)}
 				/>
-	<div  style={{paddingTop: "20px",alignSelf:"center"}}>
+			<br></br>
+	<div  style={{paddingTop: "20px",paddingLeft: "500px"}}>
     	<SubmitButton
 					text='Create Story'
 					disable={this.state.buttonDisabled}
@@ -129,6 +141,10 @@ class StoryCreateForm extends React.Component {
 };
 
 export default StoryCreateForm;
+
+
+      
+
 
 
       
