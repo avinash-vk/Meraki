@@ -34,8 +34,8 @@ const Story = (props) => {
   );
 };
 
-/* 
-  return <div>
+
+ /* return <div>
     <div>
     <img src={Man2} className="cover first-col">
     </img>
@@ -71,7 +71,8 @@ The Yiga Choeling Cultural Center of Sera Jey Buddhist monastery has a small tea
     </div>
     </div>
    <BottomNav></BottomNav>  
-  </div>;
-};*/
+  </div>
+};
+*/
 
 export default Story;

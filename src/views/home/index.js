@@ -39,10 +39,10 @@ class Home extends React.Component {
     stories: [],
   };
   componentDidMount = async () => {
-    let output = await API.GetStory();
+    //let output = await API.GetStory();
     this.setState({
       loading: false,
-      stories: output.data.data,
+      //stories: output.data.data,
     });
     console.log(this.state.stories);
   };

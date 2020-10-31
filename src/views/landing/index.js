@@ -22,7 +22,6 @@ const Landing = () => {
   return (
     <div className="container">
       <div className="headercontainer">
-        <Navbar />
         <div>
           <section className="first-col">
             <text

@@ -70,6 +70,21 @@ function AppBarCollapse() {
               Sign Up
             </Link>
           </li>
+	<li className={classes.listMenus}>
+            <Link to="" className={classes.listItems}>
+              Our Team
+            </Link>
+          </li>
+	<li className={classes.listMenus}>
+            <Link to="" className={classes.listItems}>
+              Contact
+            </Link>
+          </li>
+	<li className={classes.listMenus}>
+            <Link to="" className={classes.listItems}>
+              FAQ
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
